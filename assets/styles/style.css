@@ -1,8 +1,34 @@
+* {box-sizing: border-box}
 
-h1 {
-    color: blue;
+body {
+    background: burlywood;
+    font-family: Arial, sans-serif;
 }
 
 label {
-    color:darkorange;
+    color:burlywood;
+}
+
+#instructions {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 5px;
+    background-color: white;
+}
+
+input[type=text], input[type=date], select[id=gender], input[type=email], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
 }
