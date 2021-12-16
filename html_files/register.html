@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
     <meta charset="UTF-8">
     <title>User registration</title>
@@ -7,7 +9,19 @@
 </head>
 <body>
 
-<div id="mainContainer">
+<div class="icon-bar">
+    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+    <a href="#" class="youtube"><i class="fa fa-youtube"></i></a>
+</div>
+
+<div id="sideNavigation" class="sideNavigation">
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Help</a>
+</div>
+
+<div id="mainContainer" class="mainContainer">
     <div id="emptyDiv">
         <h1>User registration</h1>
         <div id="instructions">
@@ -35,6 +49,30 @@
             <input type="password" id="repeatPassword" name="repeatPassword" placeholder="Repeat password" required>
             </div>
         <hr>
+
+        <button class="openChatButton" onclick="openForm()">Chat</button>
+
+        <div class="chat-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Chat</h1>
+
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message here.." name="msg" required></textarea>
+
+                <button type="submit" class="sendButton">Send</button>
+                <button type="button" class="closeButton" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+        <script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
 
     </div>
 </div>

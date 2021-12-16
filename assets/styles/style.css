@@ -3,10 +3,13 @@
 body {
     background: burlywood;
     font-family: Arial, sans-serif;
+    max-width: 750px;
+    margin: auto;
+    padding: 10px;
 }
 
 label {
-    color:burlywood;
+    color:black;
 }
 
 #instructions {
@@ -32,3 +35,147 @@ input[type=text], input[type=date], select[id=gender], input[type=email], input[
 hr {
     border: 1px solid #f1f1f1;
 }
+
+.sideNavigation {
+    height: 100%;
+    width: 120px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 10px;
+    background-color: #f1f1f1;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.sideNavigation a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.mainContainer {
+    margin-left: 120px;
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sideNavigation {padding-top: 15px}
+    .sideNavigation a {font-size: 18px}
+}
+
+/* chat section */
+.openChatButton {
+    background-color: dimgray;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    position: fixed;
+    bottom: 23px;
+    right: 18px;
+    width: 280px;
+}
+
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0px 22px 5px;
+    border: none;
+    background-color: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+}
+
+.form-container label {
+    color: burlywood;
+}
+
+.form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.form-container .sendButton {
+    background-color: burlywood;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .closeButton {
+    background-color: burlywood;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+.form-container .sendButton:hover, .closeButton:hover, .openChatButton:hover {
+    opacity: 1;
+}
+
+/* social icons */
+.icon-bar {
+    position: fixed;
+    bottom: 50px;
+    right: 18px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.facebook {
+    background-color: #3B5998;
+    color: white;
+}
+
+.twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.youtube {
+    background: #bb0000;
+    color: white;
+}
+
+
